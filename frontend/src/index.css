@@ -1,0 +1,94 @@
+/* index.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #e0eafc, #cfdef3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  text-align: center;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f0f8ff;
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4b70e2;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #3a5bc0;
+}
+
+p {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+a {
+  color: #4b70e2;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Leaflet map user select */
+.leaflet-overlay-pane svg {
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Safari */
+  user-select: none; /* For modern browsers */
+}
