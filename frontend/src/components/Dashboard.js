@@ -105,17 +105,14 @@ function Dashboard() {
   };
 
   return (
-    <div style={{ display: 'flex', height: '90vh' }}>
+    
+      <div className="app-wrapper">
+    
       <ToastContainer />
 
       {/* Sidebar */}
-      <div style={{
-        width: '300px',
-        backgroundColor: '#f7f7f7',
-        overflowY: 'scroll',
-        padding: '20px',
-        borderRight: '2px solid #ddd'
-      }}>
+      <div className="sidebar">
+
         <button
           onClick={handleLogout}
           style={{
@@ -201,7 +198,8 @@ function Dashboard() {
       </div>
 
       {/* Map */}
-      <div style={{ flex: 1 }}>
+      <div className="map-area">
+
         <MapContainer center={[30.3244, 78.0330]} zoom={13} style={{ height: '100%', width: '100%' }}>
           <TileLayer
             attribution='&copy; OpenStreetMap contributors'

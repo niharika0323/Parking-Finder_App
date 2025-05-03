@@ -26,6 +26,7 @@ const Login = () => {
   };
 
   return (
+    <div className="centered-page">
     <div className="form-container">
       <form onSubmit={handleSubmit}>
         <h2>Login</h2>
@@ -56,6 +57,7 @@ const Login = () => {
           Don't have an account? <Link to="/register">Register here</Link>
         </p>
       </form>
+    </div>
     </div>
   );
 };
