@@ -20,7 +20,7 @@ function Dashboard() {
 
   const fetchSpots = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/spots');
+      const res = await axios.get('https://parking-finder-app-gaia.onrender.com/api/spots');
       setParkingSpots(res.data);
       setFilteredSpots(res.data);
     } catch (err) {
@@ -46,7 +46,7 @@ function Dashboard() {
       setLoadingSpotId(spot._id);
 
       await axios.post(
-        'http://localhost:5000/api/booking',
+        'https://parking-finder-app-gaia.onrender.com/api/booking',
         {
           spotName: spot.name,
           userEmail,
