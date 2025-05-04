@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API = axios.create({ baseURL: 'https://parking-finder-app-gaia.onrender.com' });
+const API = axios.create({ baseURL: 'https://parking-finder-app-gaia.onrender.com/api' });
 
 API.interceptors.request.use((req) => {
   const token = localStorage.getItem('token');
