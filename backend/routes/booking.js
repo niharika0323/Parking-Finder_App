@@ -58,6 +58,14 @@ router.post('/', async (req, res) => {
     // Save the booking to the database
     await newBooking.save();
 
+    // 🔻 Decrease availableSlots by 1
+if (spot.availableSlots > 0) {
+  spot.availableSlots -= 1;
+  await spot.save();
+} else {
+  return res.status(400).json({ message: 'No available slots left for this spot' });
+}
+
     // Send booking confirmation email
     await sendBookingEmail(userEmail, {
       name: user.username,
